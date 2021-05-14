@@ -1,0 +1,8 @@
+first_deque = Deque()
+second_deque = Deque()
+strings = open("task1.txt").readlines()
+strings[-1] += "\n"
+print(strings)
+for i in range(len(strings)):
+    first_deque.pushRight(strings[i])
+second_deque.pushLeft(first_deque.popLeft())
